@@ -5,25 +5,11 @@ from itertools import combinations
 import matplotlib
 import operator
 import json
-
-matplotlib.use('Agg')
+from my_init import *
 import matplotlib.pyplot as plt
+matplotlib.use('Agg')
 
-p_types = ['pfet', 'pfet_lvt', 'pmos', 'pmos2v_mac', 'pmos50_ckt', 'pch_5_mac', 'pch_5', 'pch_mac', 'hvtpfet',
-           'lvtpfet']
-n_types = ['nfet', 'nfet_lvt', 'nmos', 'nmos2v_mac', 'nmos50_ckt', 'nch_5_mac', 'nch_5', 'nch_mac', 'hvtnfet',
-           'lvtnfet']
-npn_types = ['npnhbeta1a36_mis_ckt']  # npn
-pnp_types = ['pnp2_rpo_mis']  # pnp
-res_types = ['rpposab', 'resnwsti_pure5v', 'rppolyhri3d3k', 'rppolyhri1k_dis', 'rnpo1rpo_dis', 'res']  # res
-cap_types = ['mimcap_2p0_sin', 'cap']  # cap
-diode_types = ['diode']  # diode
-passive_types = res_types + cap_types
-mosfet_types = p_types + n_types
-power_types = ['gnd', 'GND', 'vss', 'VSS', 'vdd', 'VDD', 'vcc', 'VCC']
-vdd_types = ['vdd', 'VDD', 'vcc', 'VCC']
-gnd_types = ['gnd', 'GND', 'vss', 'VSS']
-inductance_types = []
+
 
 
 class SpiceEntry(object):
@@ -565,7 +551,5 @@ def read_graph(file_name, save_dir):
 
 
 if __name__ == '__main__':
-    read_file = " ../my_readgraph/dataXY_file.txt"
-    save_file = " ../my_readgraph"
-    read_graph(read_file,
-               save_file)
+
+    read_graph(read_file,save_file)

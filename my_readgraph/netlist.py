@@ -9,10 +9,10 @@ import networkx as nx
 
 class SpiceEntry(object):
     def __init__(self):
-        self.name = ""
-        self.pins = []
-        self.cell = None
-        self.attributes = {}
+        self.name = ""        # 元件实例名称（如M1、R2等）
+        self.pins = []        # 引脚连接列表（存储节点名称或网络名）
+        self.cell = None      # 元件类型（如nmos/pmos/电阻等基础器件）
+        self.attributes = {}  # 元件参数字典（包含w/l/nf等工艺参数）
 
     def __str__(self):
         content = "name: " + self.name
@@ -27,9 +27,9 @@ class SpiceEntry(object):
 
 class SpiceSubckt(object):
     def __init__(self):
-        self.name = ""
-        self.pins = []
-        self.entries = []
+        self.name = ""        # 子电路名称（如CLK_COMP）
+        self.pins = []        # 子电路引脚列表（如["vdd", "gnd"]）
+        self.entries = []     # 子电路包含的元件实例列表（SpiceEntry对象集合）
 
     def __str__(self):
         content = "subckt: " + self.name + "\n"

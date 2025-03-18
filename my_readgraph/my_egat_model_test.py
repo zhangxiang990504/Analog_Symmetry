@@ -5,6 +5,7 @@ import my_parser as parser
 import my_readgraph as readgraph
 from my_load_data import load_data
 from my_Egatnet import *
+from my_init import *
 
 device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
 
@@ -193,7 +194,6 @@ def test_sage(test_pair1, test_pair2, test_label, feat_data, edge_feat_data, fil
 
 
 if __name__ == '__main__':
-    file_path = "../my_readgraph "  # saved file dir from readgraph
     # load_data
     start_time = time.time()
     node_feat_data, edge_feat_data, model, pair1, pair2, train_label, test_label, test_pair1, test_pair2, train_len = load_data(
