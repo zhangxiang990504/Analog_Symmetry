@@ -5,15 +5,13 @@ path_read_SPICE = "/home/zhangxiang/work/Analog_Symmetry/example"
 # specify netlist save path
 path_save_netlist = "/home/zhangxiang/work/Analog_Symmetry/saves"
 
-read_file = "/home/zhangxiang/work/Analog_Symmetry/saves/dataXY_file.txt"
+dataXY_file_path = "/home/zhangxiang/work/Analog_Symmetry/saves/dataXY_file.txt"
 save_file = "/home/zhangxiang/work/Analog_Symmetry/saves"
 
 file_path = "/home/zhangxiang/work/Analog_Symmetry/saves"  # saved file dir from readgraph
 
-p_types = ['pfet', 'pfet_lvt', 'pmos', 'pmos2v_mac', 'pmos50_ckt', 'pch_5_mac', 'pch_5', 'pch_mac', 'hvtpfet',
-           'lvtpfet','pch_lvt','pch']
-n_types = ['nfet', 'nfet_lvt', 'nmos', 'nmos2v_mac', 'nmos50_ckt', 'nch_5_mac', 'nch_5', 'nch_mac', 'hvtnfet',
-           'lvtnfet','nch_lvt','nch']
+p_types = ['pfet', 'pfet_lvt', 'pmos', 'pmos2v_mac', 'pmos50_ckt', 'pch_5_mac', 'pch_5', 'pch_mac', 'hvtpfet', 'lvtpfet','pch_lvt','pch']
+n_types = ['nfet', 'nfet_lvt', 'nmos', 'nmos2v_mac', 'nmos50_ckt', 'nch_5_mac', 'nch_5', 'nch_mac', 'hvtnfet','lvtnfet','nch_lvt','nch']
 npn_types = ['npnhbeta1a36_mis_ckt']  # npn
 pnp_types = ['pnp2_rpo_mis']  # pnp
 res_types = ['rpposab', 'resnwsti_pure5v', 'rppolyhri3d3k', 'rppolyhri1k_dis', 'rnpo1rpo_dis', 'res','rppolywo','rppolywo_m']  # res
@@ -30,6 +28,8 @@ inductance_types = []
 # 在现有路径变量后添加日志路径
 path_save_logs = "/home/zhangxiang/work/Analog_Symmetry/logs"
 para_log_path = os.path.join(path_save_logs, "parser.log")  # para日志文件路径
+
+
 
 
 # 添加日志类（保持原有变量不变）

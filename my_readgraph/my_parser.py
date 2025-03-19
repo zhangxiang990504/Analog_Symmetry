@@ -454,8 +454,9 @@ def parse_all(filedir, save_dir):
                 content += " ) "
             print(content)
             print("----------------------------------------------------------------------------------")
-
+            # 将当前电路数据添加到数据集中  
             dataX.append({"subckts": subckts, "graph": graph})
+            # 添加对应的对称关系标签
             dataY.append(symmetry_id_array)
         with open(save_dir + "/" + "dataXY_file.txt", 'wb') as f:
             pickle.dump((dataX, dataY), f)

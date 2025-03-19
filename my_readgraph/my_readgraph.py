@@ -8,7 +8,69 @@ import json
 from my_init import *
 import matplotlib.pyplot as plt
 matplotlib.use('Agg')
+# 主要功能：
+# 1. 将SPICE网表转换为图结构数据
+# 2. 提取电路元件的几何特征和电气特征
+# 3. 生成对称元件对的正负样本数据集
+# 4. 构建适合GNN训练的节点特征矩阵和边特征矩阵
 
+# 模块组成：
+# ┌───────────────────────┬──────────────────────────────────────────────┐
+# │ 类/函数               │ 功能描述                                      │
+# ├───────────────────────┼──────────────────────────────────────────────┤
+# │ SpiceSubckt           │ 表示SPICE子电路结构                          │
+# │ SpiceNode             │ 电路元件节点（MOS管/电阻等）                  │
+# │ SpiceNet              │ 电气网络节点（连接关系）                      │
+# │ SpicePin              │ 元件引脚连接关系                              │
+# │ SpiceGraph            │ 完整的电路图结构容器                          │
+# ├───────────────────────┼──────────────────────────────────────────────┤
+# │ read_graph()          │ 主处理函数，执行数据转换流程                   │
+# │ type_filter()         │ 器件类型分类器                                │
+# │ pin_filter()          │ 引脚连接关系编码器                            │
+# │ noramlization()       │ 器件尺寸参数归一化处理器                      │
+# └───────────────────────┴──────────────────────────────────────────────┘
+
+# 数据处理流程：
+# 1. 加载预处理数据       ← my_parser.py生成的dataXY_file.txt
+# 2. 构建多关系图结构     ← 包含器件连接和层次关系
+# 3. 特征工程：
+#    - 节点特征：器件类型 + 尺寸参数 + 电气权重
+#    - 边特征：连接类型 + 网络共享关系
+# 4. 生成训练样本：
+#    - 正样本：对称器件对（来自对称约束标注）
+#    - 负样本：随机非对称器件对
+# 5. 保存训练数据：
+#    - node_feats.npy : 节点特征矩阵 [N_node, feature_dim]
+#    - edge_feats.npy : 边特征矩阵   [N_edge, feature_dim]
+#    - graph.pkl      : 图结构对象
+#    - labels.txt     : 正负样本标签
+# 文件结构说明
+# graph.pkl               # NetworkX图结构对象
+# ├─ nodes                # 节点集合
+# │  ├─ 0                 # 节点ID
+# │  │  ├─ 'name'        : "M1"          # 器件实例名（如MOS管M1）
+# │  │  ├─ 'graph'       : 0             # 所属子电路索引
+# │  │  ├─ 'type'        : "nmos"        # 器件类型（nmos/pmos/res等）
+# │  │  ├─ 'w'           : 1.2e-06       # 归一化宽度（原始值/finger数*1e7）
+# │  │  ├─ 'l'           : 5e-07         # 归一化长度（原始值*1e7）
+# │  │  └─ 'nets'        : [3,5,1]       # 连接网络ID（如gate/drain/source）
+# ├─ edges                # 边集合
+# │  ├─ (0,1)            : {'weight':1}  # 边属性（主动器件间连接）
+# │  └─ (0,2)            : {'weight':0.5}# 边属性（主动-被动器件连接）
+
+# node_feats.npy          # 节点特征矩阵（N×D numpy数组）
+# [
+#   # one-hot类型编码 | 网络特征 | 尺寸特征  
+#   [0,1,0,0,0,0,0,0,0,  0,0,1,0,  0.32,0.57],  # nmos节点
+#   [1,0,0,0,0,0,0,0,0,  1,0,0,0,  -1,-1]       # IO节点
+# ]
+
+# edge_feats.npy          # 边特征矩阵（E×K numpy数组） 
+# [
+#   [1,0,0,0,0],  # gate连接（pin_type=1）
+#   [0,1,0,0,0],  # drain连接（pin_type=2）
+#   [0,0,0,1,0]   # passive连接（pin_type=4）
+# ]
 
 
 
@@ -187,7 +249,6 @@ def type_filter(type1):
     else:
         return type1
 
-
 def ground_name_filter(pname):
     if 'gnd' in pname.lower():
         return 1
@@ -277,10 +338,11 @@ def noramlization(data):
 
 
 def read_graph(file_name, save_dir):
+    # 加载预处理数据（包含电路结构数据和对称标签）
     with open(file_name, "rb") as f:
-        dataX, dataY = pickle.load(f)
+        dataX, dataY = pickle.load(f)  # dataX: 电路图对象列表，dataY: 对称约束标签
 
-    G = nx.DiGraph()  # pin included
+    G = nx.DiGraph()  # 使用NetworkX库创建有向图（Directed Graph）数据结构
     num_nodes = 0  # used to merge subgraphs by changing node indices
     all_pairs = []  # store all pos and neg node pairs
     node_type = []  # store types of all nodes
@@ -495,7 +557,6 @@ def read_graph(file_name, save_dir):
     for i in range(len(node_size_feats_ln)):
         node_size_feats.append(np.array([node_size_feats_wn[i], node_size_feats_ln[i]]))
     all_type = {'IO': 0, 'nmos': 1, 'pmos': 2, 'cap': 3, 'diode': 4, 'npn': 5, 'pnp': 6, 'res': 7, 'inductance': 8}
-    # all_type = {'IO': 0, 'nmos': 1, 'pmos': 2, 'passive': 3, 'diode': 4, 'npn': 5, 'pnp': 6}
     print(all_type)
     num_types = len(all_type)
     node_feat = []
@@ -552,4 +613,4 @@ def read_graph(file_name, save_dir):
 
 if __name__ == '__main__':
 
-    read_graph(read_file,save_file)
+    read_graph(dataXY_file_path,save_file)
