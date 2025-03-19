@@ -1,0 +1,187 @@
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/00DDAHJ.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/00DDAHJ.txt
+roots ['00DDAHJ']
+local nets dict_keys(['net030', 'net3', 'net027', 'vb', 'net037', 'net15', 'net32', 'net18', 'net34', 'net37', 'net038', 'net060', 'net29', 'net35', 'net30', 'net31'])
+recovered
+symmetry_map
+{'00DDAHJ': [['xm10', 'xm8'], ['xm10', 'xm12'], ['xm10', 'xm14'], ['xm8', 'xm12'], ['xm8', 'xm14'], ['xm12', 'xm14'], ['xm9', 'xm3'], ['xm9', 'xm11'], ['xm9', 'xm13'], ['xm3', 'xm11'], ['xm3', 'xm13'], ['xm11', 'xm13'], ['xm22', 'xm21'], ['xm19', 'xm20'], ['xm15', 'xm16'], ['xm17', 'xm18'], ['xm4', 'xm1'], ['xm5', 'xm2'], ['xm5', 'xm26'], ['xm5', 'xm25'], ['xm2', 'xm26'], ['xm2', 'xm25'], ['xm26', 'xm25'], ['xm6', 'xm23'], ['xm6', 'xm24'], ['xm23', 'xm24']]}
+symmetry_id_array
+[[34, 35], [34, 32], [34, 30], [35, 32], [35, 30], [32, 30], [37, 36], [37, 33], [37, 31], [36, 33], [36, 31], [33, 31], [22, 23], [25, 24], [29, 28], [27, 26], [18, 17], [15, 16], [15, 9], [15, 10], [16, 9], [16, 10], [9, 10], [14, 12], [14, 11], [12, 11]]
+( 00DDAHJ/xm10 00DDAHJ/xm8 ) ( 00DDAHJ/xm10 00DDAHJ/xm12 ) ( 00DDAHJ/xm10 00DDAHJ/xm14 ) ( 00DDAHJ/xm8 00DDAHJ/xm12 ) ( 00DDAHJ/xm8 00DDAHJ/xm14 ) ( 00DDAHJ/xm12 00DDAHJ/xm14 ) ( 00DDAHJ/xm9 00DDAHJ/xm3 ) ( 00DDAHJ/xm9 00DDAHJ/xm11 ) ( 00DDAHJ/xm9 00DDAHJ/xm13 ) ( 00DDAHJ/xm3 00DDAHJ/xm11 ) ( 00DDAHJ/xm3 00DDAHJ/xm13 ) ( 00DDAHJ/xm11 00DDAHJ/xm13 ) ( 00DDAHJ/xm22 00DDAHJ/xm21 ) ( 00DDAHJ/xm19 00DDAHJ/xm20 ) ( 00DDAHJ/xm15 00DDAHJ/xm16 ) ( 00DDAHJ/xm17 00DDAHJ/xm18 ) ( 00DDAHJ/xm4 00DDAHJ/xm1 ) ( 00DDAHJ/xm5 00DDAHJ/xm2 ) ( 00DDAHJ/xm5 00DDAHJ/xm26 ) ( 00DDAHJ/xm5 00DDAHJ/xm25 ) ( 00DDAHJ/xm2 00DDAHJ/xm26 ) ( 00DDAHJ/xm2 00DDAHJ/xm25 ) ( 00DDAHJ/xm26 00DDAHJ/xm25 ) ( 00DDAHJ/xm6 00DDAHJ/xm23 ) ( 00DDAHJ/xm6 00DDAHJ/xm24 ) ( 00DDAHJ/xm23 00DDAHJ/xm24 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/01DDAHR.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/01DDAHR.txt
+roots ['01DDAHR']
+local nets dict_keys(['vb3', 'net16', 'net51', 'vb', 'vb2', 'net27', 'net24', 'net34', 'net25', 'net21', 'net52', 'vb1', 'net57', 'net35', 'net54', 'net53'])
+recovered
+symmetry_map
+{'01DDAHR': [['xm16', 'xm17'], ['xm16', 'xm0'], ['xm16', 'xm4'], ['xm17', 'xm0'], ['xm17', 'xm4'], ['xm0', 'xm4'], ['xm18', 'xm19'], ['xm18', 'xm1'], ['xm18', 'xm5'], ['xm19', 'xm1'], ['xm19', 'xm5'], ['xm1', 'xm5'], ['xm8', 'xm9'], ['xm10', 'xm11'], ['xm2', 'xm3'], ['xm6', 'xm7'], ['xm24', 'xm20'], ['xm25', 'xm22'], ['xm25', 'xm15'], ['xm25', 'xm14'], ['xm22', 'xm15'], ['xm22', 'xm14'], ['xm15', 'xm14'], ['xm21', 'xm13'], ['xm21', 'xm12'], ['xm13', 'xm12']]}
+symmetry_id_array
+[[29, 28], [29, 41], [29, 37], [28, 41], [28, 37], [41, 37], [27, 26], [27, 40], [27, 36], [26, 40], [26, 36], [40, 36], [33, 32], [31, 30], [39, 38], [35, 34], [11, 15], [10, 13], [10, 16], [10, 17], [13, 16], [13, 17], [16, 17], [14, 18], [14, 19], [18, 19]]
+( 01DDAHR/xm16 01DDAHR/xm17 ) ( 01DDAHR/xm16 01DDAHR/xm0 ) ( 01DDAHR/xm16 01DDAHR/xm4 ) ( 01DDAHR/xm17 01DDAHR/xm0 ) ( 01DDAHR/xm17 01DDAHR/xm4 ) ( 01DDAHR/xm0 01DDAHR/xm4 ) ( 01DDAHR/xm18 01DDAHR/xm19 ) ( 01DDAHR/xm18 01DDAHR/xm1 ) ( 01DDAHR/xm18 01DDAHR/xm5 ) ( 01DDAHR/xm19 01DDAHR/xm1 ) ( 01DDAHR/xm19 01DDAHR/xm5 ) ( 01DDAHR/xm1 01DDAHR/xm5 ) ( 01DDAHR/xm8 01DDAHR/xm9 ) ( 01DDAHR/xm10 01DDAHR/xm11 ) ( 01DDAHR/xm2 01DDAHR/xm3 ) ( 01DDAHR/xm6 01DDAHR/xm7 ) ( 01DDAHR/xm24 01DDAHR/xm20 ) ( 01DDAHR/xm25 01DDAHR/xm22 ) ( 01DDAHR/xm25 01DDAHR/xm15 ) ( 01DDAHR/xm25 01DDAHR/xm14 ) ( 01DDAHR/xm22 01DDAHR/xm15 ) ( 01DDAHR/xm22 01DDAHR/xm14 ) ( 01DDAHR/xm15 01DDAHR/xm14 ) ( 01DDAHR/xm21 01DDAHR/xm13 ) ( 01DDAHR/xm21 01DDAHR/xm12 ) ( 01DDAHR/xm13 01DDAHR/xm12 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/02DDALAY.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/02DDALAY.txt
+roots ['02DDALAY']
+local nets dict_keys(['net017', 'net39', 'net28', 'net31', 'net37', 'net024', 'net26', 'net38', 'net52', 'net56', 'net011', 'net55', 'net54'])
+recovered
+symmetry_map
+{'02DDALAY': [['xm6', 'xm8'], ['xm6', 'xm10'], ['xm6', 'xm17'], ['xm8', 'xm10'], ['xm8', 'xm17'], ['xm10', 'xm17'], ['xm7', 'xm9'], ['xm7', 'xm11'], ['xm7', 'xm16'], ['xm9', 'xm11'], ['xm9', 'xm16'], ['xm11', 'xm16'], ['xm18', 'xm19'], ['xm21', 'xm20'], ['xm12', 'xm13'], ['xm14', 'xm15'], ['xm27', 'xm1'], ['xm27', 'xm0'], ['xm1', 'xm0'], ['xm4', 'xm2'], ['xm4', 'xm3'], ['xm2', 'xm3']]}
+symmetry_id_array
+[[33, 31], [33, 29], [33, 22], [31, 29], [31, 22], [29, 22], [32, 30], [32, 28], [32, 23], [30, 28], [30, 23], [28, 23], [21, 20], [18, 19], [27, 26], [25, 24], [8, 13], [8, 14], [13, 14], [10, 12], [10, 11], [12, 11]]
+( 02DDALAY/xm6 02DDALAY/xm8 ) ( 02DDALAY/xm6 02DDALAY/xm10 ) ( 02DDALAY/xm6 02DDALAY/xm17 ) ( 02DDALAY/xm8 02DDALAY/xm10 ) ( 02DDALAY/xm8 02DDALAY/xm17 ) ( 02DDALAY/xm10 02DDALAY/xm17 ) ( 02DDALAY/xm7 02DDALAY/xm9 ) ( 02DDALAY/xm7 02DDALAY/xm11 ) ( 02DDALAY/xm7 02DDALAY/xm16 ) ( 02DDALAY/xm9 02DDALAY/xm11 ) ( 02DDALAY/xm9 02DDALAY/xm16 ) ( 02DDALAY/xm11 02DDALAY/xm16 ) ( 02DDALAY/xm18 02DDALAY/xm19 ) ( 02DDALAY/xm21 02DDALAY/xm20 ) ( 02DDALAY/xm12 02DDALAY/xm13 ) ( 02DDALAY/xm14 02DDALAY/xm15 ) ( 02DDALAY/xm27 02DDALAY/xm1 ) ( 02DDALAY/xm27 02DDALAY/xm0 ) ( 02DDALAY/xm1 02DDALAY/xm0 ) ( 02DDALAY/xm4 02DDALAY/xm2 ) ( 02DDALAY/xm4 02DDALAY/xm3 ) ( 02DDALAY/xm2 02DDALAY/xm3 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/2019_10_01_5t_OTA.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/2019_10_01_5t_OTA.txt
+roots ['2019_10_01_5t_OTA']
+local nets dict_keys(['net2', 'net5s', 'net10', 'net4s', 'net15', 'net3s', 'net8', 'net17', 'net0s', 'net2s', 'net1s'])
+recovered
+symmetry_map
+{'2019_10_01_5t_OTA': [['m0s', 'm3s'], ['m0', 'm3'], ['m1s', 'm2s'], ['m1', 'm2'], ['m5', 'm4'], ['m5s', 'm4s']]}
+symmetry_id_array
+[[10, 8], [9, 7], [14, 12], [13, 11], [3, 5], [4, 6]]
+( 2019_10_01_5t_OTA/m0s 2019_10_01_5t_OTA/m3s ) ( 2019_10_01_5t_OTA/m0 2019_10_01_5t_OTA/m3 ) ( 2019_10_01_5t_OTA/m1s 2019_10_01_5t_OTA/m2s ) ( 2019_10_01_5t_OTA/m1 2019_10_01_5t_OTA/m2 ) ( 2019_10_01_5t_OTA/m5 2019_10_01_5t_OTA/m4 ) ( 2019_10_01_5t_OTA/m5s 2019_10_01_5t_OTA/m4s ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/CLK_COMP.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/CLK_COMP.txt
+roots ['CLK_COMP']
+local nets dict_keys(['clkb', 'net030', 'v2p', 'vxn', '_net0', 'd', 'v2n', 'db', 'vmid', 'net027', 'net031', 'vxp', 'vmidb', 'net032', 'v1p', 'net0107', 'v1n'])
+recovered
+symmetry_map
+{'CLK_COMP': [['xm16', 'xm19'], ['xm20', 'xm21'], ['xm55', 'xm70'], ['xm115', 'xm116'], ['xm35', 'xm73'], ['xm57', 'xm68'], ['xm56', 'xm69'], ['xm22', 'xm113'], ['xm1', 'xm3'], ['xm8', 'xm5'], ['xm24', 'xm114'], ['xm25', 'xm26'], ['xm119', 'xm122'], ['xm120', 'xm121']]}
+symmetry_id_array
+[[17, 32], [50, 58], [53, 44], [48, 37], [30, 31], [55, 60], [59, 35], [57, 41], [40, 51], [25, 26], [22, 18], [20, 33], [27, 19], [39, 47]]
+( CLK_COMP/xm16 CLK_COMP/xm19 ) ( CLK_COMP/xm20 CLK_COMP/xm21 ) ( CLK_COMP/xm55 CLK_COMP/xm70 ) ( CLK_COMP/xm115 CLK_COMP/xm116 ) ( CLK_COMP/xm35 CLK_COMP/xm73 ) ( CLK_COMP/xm57 CLK_COMP/xm68 ) ( CLK_COMP/xm56 CLK_COMP/xm69 ) ( CLK_COMP/xm22 CLK_COMP/xm113 ) ( CLK_COMP/xm1 CLK_COMP/xm3 ) ( CLK_COMP/xm8 CLK_COMP/xm5 ) ( CLK_COMP/xm24 CLK_COMP/xm114 ) ( CLK_COMP/xm25 CLK_COMP/xm26 ) ( CLK_COMP/xm119 CLK_COMP/xm122 ) ( CLK_COMP/xm120 CLK_COMP/xm121 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/COMPARATOR_PRE_AMP.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/COMPARATOR_PRE_AMP.txt
+roots ['COMPARATOR_PRE_AMP']
+local nets dict_keys(['net050'])
+recovered
+symmetry_map
+{'COMPARATOR_PRE_AMP': [['xm5', 'xm6'], ['xm4', 'xm3'], ['xm14', 'xm13'], ['xm10', 'xm12'], ['xm18', 'xm19'], ['xm15', 'xm8'], ['xm16', 'xm17'], ['xm0', 'xm22']]}
+symmetry_id_array
+[[18, 19], [15, 16], [26, 27], [24, 25], [21, 23], [22, 20], [13, 14], [11, 12]]
+( COMPARATOR_PRE_AMP/xm5 COMPARATOR_PRE_AMP/xm6 ) ( COMPARATOR_PRE_AMP/xm4 COMPARATOR_PRE_AMP/xm3 ) ( COMPARATOR_PRE_AMP/xm14 COMPARATOR_PRE_AMP/xm13 ) ( COMPARATOR_PRE_AMP/xm10 COMPARATOR_PRE_AMP/xm12 ) ( COMPARATOR_PRE_AMP/xm18 COMPARATOR_PRE_AMP/xm19 ) ( COMPARATOR_PRE_AMP/xm15 COMPARATOR_PRE_AMP/xm8 ) ( COMPARATOR_PRE_AMP/xm16 COMPARATOR_PRE_AMP/xm17 ) ( COMPARATOR_PRE_AMP/xm0 COMPARATOR_PRE_AMP/xm22 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/CP_branch_LVT_v5.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/CP_branch_LVT_v5.txt
+roots ['CP_branch_LVT_v5']
+local nets dict_keys(['net38', 'net37', 'net41', 'net40'])
+recovered
+symmetry_map
+{'CP_branch_LVT_v5': [['xm39', 'xm41'], ['xm4', 'xm3']]}
+symmetry_id_array
+[[14, 13], [16, 15]]
+( CP_branch_LVT_v5/xm39 CP_branch_LVT_v5/xm41 ) ( CP_branch_LVT_v5/xm4 CP_branch_LVT_v5/xm3 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/Cascode_current_mirrot_OTA.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/Cascode_current_mirrot_OTA.txt
+roots ['Cascode_current_mirrot_OTA']
+local nets dict_keys(['net034', 'net033', 'net16', 'net24', 'net17', 'net27', 'net9b', 'net8b', 'net021', 'net015', 'net024', 'net06'])
+recovered
+symmetry_map
+{'Cascode_current_mirrot_OTA': [['m17', 'm15'], ['m26', 'm27'], ['m21', 'm19'], ['m20', 'm18'], ['m22', 'm23'], ['m24', 'm25'], ['m11', 'm10'], ['m14', 'm16']]}
+symmetry_id_array
+[[10, 12], [21, 20], [24, 26], [25, 27], [23, 22], [9, 8], [14, 15], [13, 11]]
+( Cascode_current_mirrot_OTA/m17 Cascode_current_mirrot_OTA/m15 ) ( Cascode_current_mirrot_OTA/m26 Cascode_current_mirrot_OTA/m27 ) ( Cascode_current_mirrot_OTA/m21 Cascode_current_mirrot_OTA/m19 ) ( Cascode_current_mirrot_OTA/m20 Cascode_current_mirrot_OTA/m18 ) ( Cascode_current_mirrot_OTA/m22 Cascode_current_mirrot_OTA/m23 ) ( Cascode_current_mirrot_OTA/m24 Cascode_current_mirrot_OTA/m25 ) ( Cascode_current_mirrot_OTA/m11 Cascode_current_mirrot_OTA/m10 ) ( Cascode_current_mirrot_OTA/m14 Cascode_current_mirrot_OTA/m16 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/Comparator_1to7_0p7_lvt.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/Comparator_1to7_0p7_lvt.txt
+roots ['Comparator_1to7_0p7_lvt']
+local nets dict_keys(['vout1p', 'clk', 'vout1m', 'net043', 'vout2p', 'vout2m', 'net058', 'net040', 'net057', 'net041'])
+recovered
+symmetry_map
+{'Comparator_1to7_0p7_lvt': [['xm34', 'xm28'], ['xm21', 'xm14'], ['xm33', 'xm25'], ['xm32', 'xm29'], ['xm10', 'xm11'], ['xm13', 'xm12'], ['xm11', 'xm13'], ['xm10', 'xm12'], ['xm10', 'xm13'], ['xm11', 'xm12'], ['xm35', 'xm40'], ['xm36', 'xm37'], ['m0', 'm2'], ['m3', 'm1'], ['xm8', 'xm7'], ['xm6', 'xm9']]}
+symmetry_id_array
+[[20, 17], [41, 34], [23, 21], [13, 12], [25, 32], [40, 35], [32, 40], [25, 35], [25, 40], [32, 35], [24, 37], [26, 36], [45, 43], [44, 42], [22, 16], [38, 27]]
+( Comparator_1to7_0p7_lvt/xm34 Comparator_1to7_0p7_lvt/xm28 ) ( Comparator_1to7_0p7_lvt/xm21 Comparator_1to7_0p7_lvt/xm14 ) ( Comparator_1to7_0p7_lvt/xm33 Comparator_1to7_0p7_lvt/xm25 ) ( Comparator_1to7_0p7_lvt/xm32 Comparator_1to7_0p7_lvt/xm29 ) ( Comparator_1to7_0p7_lvt/xm10 Comparator_1to7_0p7_lvt/xm11 ) ( Comparator_1to7_0p7_lvt/xm13 Comparator_1to7_0p7_lvt/xm12 ) ( Comparator_1to7_0p7_lvt/xm11 Comparator_1to7_0p7_lvt/xm13 ) ( Comparator_1to7_0p7_lvt/xm10 Comparator_1to7_0p7_lvt/xm12 ) ( Comparator_1to7_0p7_lvt/xm10 Comparator_1to7_0p7_lvt/xm13 ) ( Comparator_1to7_0p7_lvt/xm11 Comparator_1to7_0p7_lvt/xm12 ) ( Comparator_1to7_0p7_lvt/xm35 Comparator_1to7_0p7_lvt/xm40 ) ( Comparator_1to7_0p7_lvt/xm36 Comparator_1to7_0p7_lvt/xm37 ) ( Comparator_1to7_0p7_lvt/m0 Comparator_1to7_0p7_lvt/m2 ) ( Comparator_1to7_0p7_lvt/m3 Comparator_1to7_0p7_lvt/m1 ) ( Comparator_1to7_0p7_lvt/xm8 Comparator_1to7_0p7_lvt/xm7 ) ( Comparator_1to7_0p7_lvt/xm6 Comparator_1to7_0p7_lvt/xm9 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/Comparator_not_clocked.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/Comparator_not_clocked.txt
+roots ['Comparator_not_clocked']
+local nets dict_keys(['net44', 'net10', 'net7', 'net5', 'net18', 'net17', 'net13', 'net23', 'net14'])
+recovered
+symmetry_map
+{'Comparator_not_clocked': [['M10', 'M8'], ['M6', 'M7'], ['M1', 'M4'], ['M2', 'M3'], ['M0', 'M5'], ['M11', 'M9'], ['M13', 'M15'], ['M12', 'M14']]}
+symmetry_id_array
+[[12, 13], [15, 14], [24, 23], [22, 21], [9, 8], [10, 11], [28, 27], [20, 19]]
+( Comparator_not_clocked/M10 Comparator_not_clocked/M8 ) ( Comparator_not_clocked/M6 Comparator_not_clocked/M7 ) ( Comparator_not_clocked/M1 Comparator_not_clocked/M4 ) ( Comparator_not_clocked/M2 Comparator_not_clocked/M3 ) ( Comparator_not_clocked/M0 Comparator_not_clocked/M5 ) ( Comparator_not_clocked/M11 Comparator_not_clocked/M9 ) ( Comparator_not_clocked/M13 Comparator_not_clocked/M15 ) ( Comparator_not_clocked/M12 Comparator_not_clocked/M14 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/Current_mirror_OTA.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/Current_mirror_OTA.txt
+roots ['Current_mirror_OTA']
+local nets dict_keys(['net16', 'net24', 'net27', 'm20stack', 'm18stack'])
+recovered
+symmetry_map
+{'Current_mirror_OTA': [['m17', 'm15'], ['m21', 'm18'], ['m20', 'm18'], ['m20s', 'm18s'], ['m14', 'm16'], ['m11', 'm10']]}
+symmetry_id_array
+[[7, 9], [13, 17], [14, 17], [15, 18], [10, 8], [11, 12]]
+( Current_mirror_OTA/m17 Current_mirror_OTA/m15 ) ( Current_mirror_OTA/m21 Current_mirror_OTA/m18 ) ( Current_mirror_OTA/m20 Current_mirror_OTA/m18 ) ( Current_mirror_OTA/m20s Current_mirror_OTA/m18s ) ( Current_mirror_OTA/m14 Current_mirror_OTA/m16 ) ( Current_mirror_OTA/m11 Current_mirror_OTA/m10 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/Gm1_v5_Practice.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/Gm1_v5_Practice.txt
+roots ['Gm1_v5_Practice']
+local nets dict_keys(['net074', 'ntail1'])
+recovered
+symmetry_map
+{'Gm1_v5_Practice': [['xm11', 'xm14'], ['xm15', 'xm12'], ['xr11', 'xr12'], ['xc21', 'xc22'], ['xm27', 'xm26'], ['xm0', 'xm3'], ['xm2', 'xm4']]}
+symmetry_id_array
+[[11, 13], [12, 10], [19, 18], [16, 17], [15, 14], [21, 20], [8, 9]]
+( Gm1_v5_Practice/xm11 Gm1_v5_Practice/xm14 ) ( Gm1_v5_Practice/xm15 Gm1_v5_Practice/xm12 ) ( Gm1_v5_Practice/xr11 Gm1_v5_Practice/xr12 ) ( Gm1_v5_Practice/xc21 Gm1_v5_Practice/xc22 ) ( Gm1_v5_Practice/xm27 Gm1_v5_Practice/xm26 ) ( Gm1_v5_Practice/xm0 Gm1_v5_Practice/xm3 ) ( Gm1_v5_Practice/xm2 Gm1_v5_Practice/xm4 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/NRZ_TRI_DAC_v3_dnw.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/NRZ_TRI_DAC_v3_dnw.txt
+roots ['NRZ_TRI_DAC_v3_dnw']
+local nets dict_keys(['vcm2', 'v2', 'v1', 'vcm1'])
+recovered
+symmetry_map
+{'NRZ_TRI_DAC_v3_dnw': [['xm17', 'xm7'], ['xm6', 'xm7'], ['xm17', 'xm6'], ['xm18', 'xm14'], ['xm18', 'xm15'], ['xm14', 'xm15']]}
+symmetry_id_array
+[[18, 17], [19, 17], [18, 19], [24, 26], [24, 25], [26, 25]]
+( NRZ_TRI_DAC_v3_dnw/xm17 NRZ_TRI_DAC_v3_dnw/xm7 ) ( NRZ_TRI_DAC_v3_dnw/xm6 NRZ_TRI_DAC_v3_dnw/xm7 ) ( NRZ_TRI_DAC_v3_dnw/xm17 NRZ_TRI_DAC_v3_dnw/xm6 ) ( NRZ_TRI_DAC_v3_dnw/xm18 NRZ_TRI_DAC_v3_dnw/xm14 ) ( NRZ_TRI_DAC_v3_dnw/xm18 NRZ_TRI_DAC_v3_dnw/xm15 ) ( NRZ_TRI_DAC_v3_dnw/xm14 NRZ_TRI_DAC_v3_dnw/xm15 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/OTA_FF_2s_v3e.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/OTA_FF_2s_v3e.txt
+roots ['OTA_FF_2s_v3e']
+local nets dict_keys(['net057', 'cmfb', 'vcmo', 'net044', 'net59', 'net5', 'net75', 'on1', 'op1'])
+recovered
+symmetry_map
+{'OTA_FF_2s_v3e': [['m4', 'm6'], ['m50', 'm20'], ['m13', 'm14'], ['m64', 'm66'], ['m2', 'm7'], ['m37', 'm23'], ['m19', 'm21'], ['xc5', 'xc4'], ['xr12', 'xr13'], ['m58', 'm48'], ['m29', 'm30'], ['m56', 'm59']]}
+symmetry_id_array
+[[27, 26], [24, 28], [39, 38], [33, 32], [30, 29], [17, 18], [36, 35], [44, 43], [45, 46], [20, 25], [37, 41], [42, 40]]
+( OTA_FF_2s_v3e/m4 OTA_FF_2s_v3e/m6 ) ( OTA_FF_2s_v3e/m50 OTA_FF_2s_v3e/m20 ) ( OTA_FF_2s_v3e/m13 OTA_FF_2s_v3e/m14 ) ( OTA_FF_2s_v3e/m64 OTA_FF_2s_v3e/m66 ) ( OTA_FF_2s_v3e/m2 OTA_FF_2s_v3e/m7 ) ( OTA_FF_2s_v3e/m37 OTA_FF_2s_v3e/m23 ) ( OTA_FF_2s_v3e/m19 OTA_FF_2s_v3e/m21 ) ( OTA_FF_2s_v3e/xc5 OTA_FF_2s_v3e/xc4 ) ( OTA_FF_2s_v3e/xr12 OTA_FF_2s_v3e/xr13 ) ( OTA_FF_2s_v3e/m58 OTA_FF_2s_v3e/m48 ) ( OTA_FF_2s_v3e/m29 OTA_FF_2s_v3e/m30 ) ( OTA_FF_2s_v3e/m56 OTA_FF_2s_v3e/m59 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/Retiming_Latch_common.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/Retiming_Latch_common.txt
+roots ['Retiming_Latch_common']
+local nets dict_keys(['net025', 'net017', 'clk', 'clkn', 'net36', 'net39', 'net37', 'net38'])
+recovered
+symmetry_map
+{'Retiming_Latch_common': [['xm16', 'xm12'], ['xm20', 'xm21'], ['xm10', 'xm0'], ['xm11', 'xm1'], ['xm13', 'xm17'], ['xm19', 'xm18'], ['xm37', 'xm39'], ['xm36', 'xm38'], ['xm33', 'xm35'], ['xm32', 'xm34']]}
+symmetry_id_array
+[[9, 11], [26, 25], [15, 13], [14, 12], [23, 20], [27, 29], [16, 6], [24, 18], [8, 17], [21, 28]]
+( Retiming_Latch_common/xm16 Retiming_Latch_common/xm12 ) ( Retiming_Latch_common/xm20 Retiming_Latch_common/xm21 ) ( Retiming_Latch_common/xm10 Retiming_Latch_common/xm0 ) ( Retiming_Latch_common/xm11 Retiming_Latch_common/xm1 ) ( Retiming_Latch_common/xm13 Retiming_Latch_common/xm17 ) ( Retiming_Latch_common/xm19 Retiming_Latch_common/xm18 ) ( Retiming_Latch_common/xm37 Retiming_Latch_common/xm39 ) ( Retiming_Latch_common/xm36 Retiming_Latch_common/xm38 ) ( Retiming_Latch_common/xm33 Retiming_Latch_common/xm35 ) ( Retiming_Latch_common/xm32 Retiming_Latch_common/xm34 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/Telescopic_OTA_stacked_single_ended.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/Telescopic_OTA_stacked_single_ended.txt
+roots ['Telescopic_OTA_stacked_single_ended']
+local nets dict_keys(['net8s', 'net8', 'net014s', 'net014', 'netm5s', 'net10', 'netm4s', 'netm3s', 'netm0s', 'net012s', 'net012', 'net06s', 'net06', 'netm2s', 'netm1s', 'net5s', 'net5', 'netm11s', 'net9', 'netm15s', 'netm16s', 'netm17s', 'netm12s', 'netm13s', 'net7', 'netm14s'])
+recovered
+symmetry_map
+{'Telescopic_OTA_stacked_single_ended': [['m0s', 'm3s'], ['m0', 'm3'], ['m9s', 'm8s'], ['m9', 'm8'], ['m6', 'm7'], ['m6s', 'm7s'], ['m1', 'm2'], ['m1s', 'm2s'], ['m12', 'm15'], ['m12s', 'm15s'], ['m16s', 'm17s'], ['m16', 'm17']]}
+symmetry_id_array
+[[21, 19], [20, 18], [11, 13], [10, 12], [24, 22], [25, 23], [28, 26], [29, 27], [40, 34], [41, 35], [37, 39], [36, 38]]
+( Telescopic_OTA_stacked_single_ended/m0s Telescopic_OTA_stacked_single_ended/m3s ) ( Telescopic_OTA_stacked_single_ended/m0 Telescopic_OTA_stacked_single_ended/m3 ) ( Telescopic_OTA_stacked_single_ended/m9s Telescopic_OTA_stacked_single_ended/m8s ) ( Telescopic_OTA_stacked_single_ended/m9 Telescopic_OTA_stacked_single_ended/m8 ) ( Telescopic_OTA_stacked_single_ended/m6 Telescopic_OTA_stacked_single_ended/m7 ) ( Telescopic_OTA_stacked_single_ended/m6s Telescopic_OTA_stacked_single_ended/m7s ) ( Telescopic_OTA_stacked_single_ended/m1 Telescopic_OTA_stacked_single_ended/m2 ) ( Telescopic_OTA_stacked_single_ended/m1s Telescopic_OTA_stacked_single_ended/m2s ) ( Telescopic_OTA_stacked_single_ended/m12 Telescopic_OTA_stacked_single_ended/m15 ) ( Telescopic_OTA_stacked_single_ended/m12s Telescopic_OTA_stacked_single_ended/m15s ) ( Telescopic_OTA_stacked_single_ended/m16s Telescopic_OTA_stacked_single_ended/m17s ) ( Telescopic_OTA_stacked_single_ended/m16 Telescopic_OTA_stacked_single_ended/m17 ) 
+----------------------------------------------------------------------------------
+read netlist file: /home/zhangxiang/work/Analog_Symmetry/example/myComparator_v3.sp
+read symmetry file: /home/zhangxiang/work/Analog_Symmetry/example/myComparator_v3.txt
+roots ['myComparator_v3']
+local nets dict_keys(['intern', 'interp', 'crossp', 'crossn', 'net069'])
+recovered
+symmetry_map
+{'myComparator_v3': [['xm18', 'xm2'], ['xm1', 'xm12'], ['xm14', 'xm13'], ['xm4', 'xm3'], ['xm5', 'xm6'], ['xm0', 'xm22'], ['xm15', 'xm8'], ['xm17', 'xm16']]}
+symmetry_id_array
+[[17, 19], [20, 21], [22, 23], [11, 12], [14, 15], [7, 8], [18, 16], [10, 9]]
+( myComparator_v3/xm18 myComparator_v3/xm2 ) ( myComparator_v3/xm1 myComparator_v3/xm12 ) ( myComparator_v3/xm14 myComparator_v3/xm13 ) ( myComparator_v3/xm4 myComparator_v3/xm3 ) ( myComparator_v3/xm5 myComparator_v3/xm6 ) ( myComparator_v3/xm0 myComparator_v3/xm22 ) ( myComparator_v3/xm15 myComparator_v3/xm8 ) ( myComparator_v3/xm17 myComparator_v3/xm16 ) 
+----------------------------------------------------------------------------------
