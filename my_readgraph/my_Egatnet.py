@@ -30,18 +30,31 @@ def plot(value, name):
 
 
 class Mlp(nn.Module):
+    """带有残差连接的多层感知机
+    结构：LayerNorm -> 扩展维度(2x) -> ReLU -> 压缩维度 -> 残差连接
+    参数：
+        node_in_feats: 输入节点特征维度
+    """
     def __init__(self, node_in_feats):
         super(Mlp, self).__init__()
+        # 特征维度扩展层：node_in_feats -> 2*node_in_feats
         self.fc0 = nn.Linear(node_in_feats, node_in_feats * 2)
+        # 特征维度压缩层：2*node_in_feats -> node_in_feats
         self.fc1 = nn.Linear(node_in_feats * 2, node_in_feats)
+        # 层归一化（保持输入输出维度一致）
         self.norm = nn.LayerNorm(node_in_feats)
         self.reset_parameters()
 
     def reset_parameters(self):
-        nn.init.xavier_uniform_(self.fc0.weight)
-        nn.init.xavier_uniform_(self.fc1.weight)
+        """Xavier均匀分布初始化权重参数"""
+        nn.init.xavier_uniform_(self.fc0.weight)  # 初始化扩展层权重
+        nn.init.xavier_uniform_(self.fc1.weight)  # 初始化压缩层权重
 
     def forward(self, x):
+        """前向传播过程（含残差连接）
+        公式：x = x + MLP(LN(x))
+        """
+        # 残差连接：原始输入 + 非线性变换结果
         x = x + self.fc1(F.relu(self.fc0(self.norm(x))))
         return x
 

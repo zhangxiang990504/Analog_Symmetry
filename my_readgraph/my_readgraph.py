@@ -188,48 +188,7 @@ def type_rule2(type1, type2):
         return type2 in n_types
     return 0
 
-
-# def type_filter(type1):
-#     # types1 = ['pfet', 'pfet_lvt', 'pmos', 'pmos2v_mac', 'pmos50_ckt', 'pch_5_mac', 'pch_5']  # pmos
-#     # types2 = ['nfet', 'nfet_lvt', 'nmos', 'nmos2v_mac', 'nmos50_ckt', 'nch_5_mac', 'nch_5']  # nmos
-#     # types3 = ['npnhbeta1a36_mis_ckt']  # npn
-#     # types4 = []  # pnp
-#     # types5 = ['rpposab', 'resnwsti_pure5v', 'rppolyhri3d3k']  # res
-#     # types6 = []  # cap
-#     # types7 = []  # diode
-#     if type1 in p_types:
-#         return 'pmos'
-#     elif type1 in n_types:
-#         return 'nmos'
-#     elif type1 in npn_types:
-#         return 'npn'
-#     elif type1 in pnp_types:
-#         return 'pnp'
-#     elif type1 in res_types:
-#         return 'res'
-#     elif type1 in cap_types:
-#         return 'cap'
-#     elif type1 in diode_types:
-#         return 'diode'
-#     else:
-#         return type1
-
 def type_filter(type1):
-    # if type1 in p_types:
-    #     return 'pmos'
-    # elif type1 in n_types:
-    #     return 'nmos'
-    # elif type1 in npn_types:
-    #     return 'npn'
-    # elif type1 in pnp_types:
-    #     return 'pnp'
-    # elif (type1 in res_types) or (type1 in cap_types):
-    #     return 'passive'
-    # elif type1 in diode_types:
-    #     return 'diode'
-    # else:
-    #     return type1
-
     if type1 in p_types:
         return 'pmos'
     elif type1 in n_types:
@@ -416,23 +375,10 @@ def read_graph(file_name, save_dir):
             elif len(G.nodes[p.node_id + num_nodes]['nets']) == 3 and all(
                     x == G.nodes[p.node_id + num_nodes]['nets'][0] for x in G.nodes[p.node_id + num_nodes]['nets']):
                 G.nodes[p.node_id + num_nodes]['nets'].append(0)
-        # for p in graph.pins:
-        #     if p.attributes['type'] not in ['substrate', 'hbeta']:
-        #         if G.nodes[p.node_id + num_nodes].__contains__('nets'):
-        #             G.nodes[p.node_id + num_nodes]['nets'].append(p.net_id)
-        #         else:
-        #             net_list = [p.net_id]
-        #             G.nodes[p.node_id + num_nodes]['nets'] = net_list
-        #     if len(G.nodes[p.node_id + num_nodes]['nets']) == 3:
-        #         if graph.pins[G.nodes[p.node_id + num_nodes]['nets'][1]].attributes['type'] == 'IO':
-        #             G.nodes[p.node_id + num_nodes]['nets'].append(1)  # 是IO
-        #         else:
-        #             G.nodes[p.node_id + num_nodes]['nets'].append(0)  # 不是IO
         big = len(G.nodes)
         if not train:
             my_test_name[dataX[i]['subckts'][0].name] = [small, big - 1]
-        node_pairs = list(combinations(list(sub_G.nodes()), 2))  # all possible node pairs
-        # random.shuffle(node_pairs)
+        node_pairs = list(combinations(list(sub_G.nodes()), 2))  # 
         neg_pairs = []
         neg_size = 10
         for pair in node_pairs:
