@@ -3,10 +3,11 @@ import os
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QListWidget, QLabel,
     QPushButton, QHBoxLayout, QVBoxLayout, QSplitter,
-    QLineEdit, QFileDialog, QMessageBox, QSizePolicy,QCheckBox,QComboBox
+    QLineEdit, QFileDialog, QMessageBox, QSizePolicy,QCheckBox,QComboBox,
+    QProgressBar
 )
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtCore import Qt, QTimer,QEventLoop  
 
 list_scale = 1
 image_scale = 4
@@ -101,6 +102,9 @@ class ImageViewer(QWidget):
         main_layout.setStretch(1, 4)
 
         self.connectsignals()
+
+        self.progress_bar_left = None
+        self.progress_bar_right = None
 
         self.setWindowTitle("Packing Result Preview")
         self.resize(1200, 800)
@@ -291,7 +295,7 @@ class ImageViewer(QWidget):
         except:
             self.setWindowTitle("Packing Result Preview")
 
-    def load_images(self, side="left"):
+    def load_images(self, side):
         """Load images into specified panel"""
         path = self.path_input.text().strip()
         if not path:
@@ -321,10 +325,10 @@ class ImageViewer(QWidget):
                 image_files.sort(key=lambda x: os.path.basename(x).lower())
                 
             elif os.path.isfile(path):
-                if not path.lower().endswith(image_extensions):
-                    QMessageBox.warning(self, "Error", "Unsupported file format!")
-                    return
-                image_files = [path]
+                processed_dir = self.parser_logfile(path,side)
+                self.path_input.setText(processed_dir)
+                self.load_images(side) 
+                return
             else:
                 QMessageBox.warning(self, "Error", "Invalid path!")
                 return
@@ -351,9 +355,44 @@ class ImageViewer(QWidget):
             self.update_display(side)
             
         except Exception as e:
-            QMessageBox.critical(self, "error", f"load pic file：{str(e)}")
+            QMessageBox.critical(self, "error", f"load pic file:{str(e)}")
         
+    def parser_logfile(self, input_file, side):
+        try:
+            if side == "left":
+                parent_label = self.left_image_label
+                self.progress_bar_left = QProgressBar(parent_label)
+                progress_bar = self.progress_bar_left
+            else:
+                parent_label = self.right_image_label
+                self.progress_bar_right = QProgressBar(parent_label)
+                progress_bar = self.progress_bar_right
+                
+            progress_bar.setGeometry(10, 10, 200, 20)
+            progress_bar.setFormat("Processing: %v/100")
+            progress_bar.show()
+            
+            output_dir = os.path.join(os.path.dirname(input_file), "processed")
+            os.makedirs(output_dir, exist_ok=True)
+            
+            for i in range(1, 101):
+                QApplication.processEvents()
+                progress_bar.setValue(i)
+                
+                loop = QEventLoop()
+                QTimer.singleShot(100, loop.quit)
+                loop.exec_()
+            
+            return "/home/zhangxiang/workspace/packing/png"
 
+        finally:
+            if side == "left" and self.progress_bar_left:
+                self.progress_bar_left.deleteLater()
+                self.progress_bar_left = None
+            elif side == "right" and self.progress_bar_right:
+                self.progress_bar_right.deleteLater()
+                self.progress_bar_right = None
+    
     def get_default_directory(self):
         default_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "png")
         
@@ -371,7 +410,7 @@ class ImageViewer(QWidget):
         if not self.slideshow_active:
             try:
                 interval = int(self.interval_input.text())
-                if interval < 100:  # 设置最小间隔为100ms
+                if interval < 100:  
                     interval = 100
                     self.interval_input.setText("100")
                 self.slideshow_timer.start(interval)
